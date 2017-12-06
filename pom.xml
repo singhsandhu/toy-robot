@@ -30,7 +30,7 @@
                     </configuration>
                 </plugin>
 
-                <plugin>
+               <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>3.0.0</version>
@@ -41,6 +41,33 @@
                             </manifest>
                         </archive>
                     </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>ToyRobotApp</mainClass>
+                            </manifest>
+                        </archive>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <finalName>${project.artifactId}-${project.version}-FINAL</finalName>
+                        <appendAssemblyId>false</appendAssemblyId>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
 
                 <plugin>
@@ -132,6 +159,7 @@
             <groupId>co.unruly</groupId>
             <artifactId>java-8-matchers</artifactId>
             <version>1.5</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
