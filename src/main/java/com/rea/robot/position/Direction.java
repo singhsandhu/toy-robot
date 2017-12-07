@@ -25,7 +25,7 @@ public enum Direction {
     EAST {
         public void move(RobotLocation currentLocation) {
             if(currentLocation.isLocationValid(currentLocation.getRobotTableRow() + 1, currentLocation.getRobotTableColumn())) {
-                currentLocation.setRobotTableRow(currentLocation.getRobotTableColumn() + 1);
+                currentLocation.setRobotTableRow(currentLocation.getRobotTableRow()+ 1);
             }
         }
     };
