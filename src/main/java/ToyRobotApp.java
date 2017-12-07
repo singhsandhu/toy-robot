@@ -1,12 +1,16 @@
 import com.rea.input.InputProcessor;
+import com.rea.input.RobotCommands;
+
 import static com.rea.validator.CommandValidator.VALID_COMMAND;
 
 public class ToyRobotApp {
 
     public static void main(String... args) {
-        new InputProcessor(System.in)
+        new RobotCommands()
+                .apply(new InputProcessor(System.in)
                 .processInput(args)
-                .filter(VALID_COMMAND);
+                .map(val -> val.trim())
+                .filter(VALID_COMMAND));
     }
 
 }
