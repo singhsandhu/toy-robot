@@ -1,4 +1,4 @@
-package com.rea.input;
+package com.rea.robot.input;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.log4j.Logger;
 
-import static com.rea.validator.CommandSet.PLACE;
+import static com.rea.robot.validator.CommandSet.PLACE;
 
 public class RobotCommands implements Function<Stream<String>, Stream<String>>{
 

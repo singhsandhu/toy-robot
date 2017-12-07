@@ -1,12 +1,12 @@
-package com.rea.validator;
+package com.rea.robot.validator;
 
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-import static com.rea.validator.RobotPositionValidator.IS_VALID_POSITION;
-import static com.rea.validator.RobotPositionValidator.IS_VALID_DIRECTION;
+import static com.rea.robot.validator.RobotPositionValidator.IS_VALID_POSITION;
+import static com.rea.robot.validator.RobotPositionValidator.IS_VALID_DIRECTION;
 
 
 public class CommandValidator {

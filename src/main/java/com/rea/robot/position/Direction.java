@@ -1,4 +1,4 @@
-package com.rea.position;
+package com.rea.robot.position;
 
 public enum Direction {
     NORTH,

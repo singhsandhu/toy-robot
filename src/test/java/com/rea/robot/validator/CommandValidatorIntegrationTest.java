@@ -1,4 +1,4 @@
-package com.rea.validator;
+package com.rea.robot.validator;
 
 import co.unruly.matchers.StreamMatchers;
 import org.hamcrest.MatcherAssert;

@@ -1,4 +1,4 @@
-package com.rea.validator;
+package com.rea.robot.validator;
 
 public enum CommandSet {
         PLACE,

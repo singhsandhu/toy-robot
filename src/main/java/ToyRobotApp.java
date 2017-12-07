@@ -1,7 +1,7 @@
-import com.rea.input.InputProcessor;
-import com.rea.input.RobotCommands;
+import com.rea.robot.input.InputProcessor;
+import com.rea.robot.input.RobotCommands;
 
-import static com.rea.validator.CommandValidator.VALID_COMMAND;
+import static com.rea.robot.validator.CommandValidator.VALID_COMMAND;
 
 public class ToyRobotApp {
 

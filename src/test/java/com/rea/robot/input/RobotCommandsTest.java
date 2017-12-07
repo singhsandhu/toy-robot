@@ -1,4 +1,4 @@
-package com.rea.input;
+package com.rea.robot.input;
 
 import co.unruly.matchers.StreamMatchers;
 import org.hamcrest.MatcherAssert;

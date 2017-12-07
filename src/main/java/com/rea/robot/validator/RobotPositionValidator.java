@@ -1,10 +1,10 @@
-package com.rea.validator;
-import com.rea.position.Direction;
+package com.rea.robot.validator;
+import com.rea.robot.position.Direction;
 
 import java.util.stream.Stream;
 
-import static com.rea.position.RobotLocation.X_ROWS;
-import static com.rea.position.RobotLocation.Y_ROWS;
+import static com.rea.robot.position.RobotLocation.X_ROWS;
+import static com.rea.robot.position.RobotLocation.Y_ROWS;
 
 public class RobotPositionValidator {
 

@@ -1,4 +1,4 @@
-package com.rea.validator;
+package com.rea.robot.validator;
 
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
