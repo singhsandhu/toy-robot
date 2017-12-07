@@ -5,7 +5,7 @@ import com.rea.robot.ToyRobot;
 public class MoveCommand implements Command {
 
     @Override
-    public void apply(ToyRobot toyRobot) {
+    public void execute(ToyRobot toyRobot) {
         toyRobot.getRobotDirection().move(toyRobot.getRobotLocation());
     }
 }

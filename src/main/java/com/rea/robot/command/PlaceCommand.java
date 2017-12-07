@@ -25,7 +25,7 @@ public class PlaceCommand implements Command {
     }
 
     @Override
-    public void apply(ToyRobot toyRobot) {
+    public void execute(ToyRobot toyRobot) {
         RobotLocation robotLocation = new RobotLocation();
         if(robotLocation.isLocationValid(row, column)) {
             robotLocation.setRobotTableRow(row);

@@ -30,7 +30,7 @@ public class MoveCommandTest {
         robot.setRobotDirection(Direction.WEST);
         robot.setRobotLocation(robotLocation);
 
-        command.apply(robot);
+        command.execute(robot);
 
         assertThat(robot.getRobotDirection(), is(Direction.WEST));
         assertThat(robot.getRobotLocation().getRobotTableRow(), is(1));
@@ -43,7 +43,7 @@ public class MoveCommandTest {
         robot.setRobotDirection(Direction.WEST);
         robot.setRobotLocation(robotLocation);
 
-        command.apply(robot);
+        command.execute(robot);
 
         assertThat(robot.getRobotDirection(), is(Direction.WEST));
         assertThat(robot.getRobotLocation().getRobotTableRow(), is(0));

@@ -30,7 +30,7 @@ public class LeftCommandTest {
         robot.setRobotDirection(Direction.EAST);
         robot.setRobotLocation(robotLocation);
 
-        command.apply(robot);
+        command.execute(robot);
 
         assertThat(robot.getRobotDirection(), is(Direction.NORTH));
         assertThat(robot.getRobotLocation().getRobotTableRow(), is(3));

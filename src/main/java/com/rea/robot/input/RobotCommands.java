@@ -10,6 +10,10 @@ import org.apache.log4j.Logger;
 
 import static com.rea.robot.validator.CommandSet.PLACE;
 
+/**
+ * First Valid command is a PLACE command. So any command prior to that should be ignored
+ * This class provides the implementation of this requirement.
+ */
 public class RobotCommands implements Function<Stream<String>, Stream<String>>{
 
     private static final Logger LOG = Logger.getLogger(RobotCommands.class);
