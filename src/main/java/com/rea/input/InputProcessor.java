@@ -1,4 +1,4 @@
-package com.rea.Input;
+package com.rea.input;
 
 import org.apache.log4j.Logger;
 

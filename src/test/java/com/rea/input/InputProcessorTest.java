@@ -1,4 +1,4 @@
-package com.rea.Input;
+package com.rea.input;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
