@@ -21,7 +21,7 @@ public class ToyRobotAppIntegrationTest {
         robot = new ToyRobot();
     }
 
-    public void resultShouldMatcgWithExpectedOutput_1() {
+    public void resultShouldMatchWithExpectedOutput_1() {
         robotApp.startRobot(robot, INPUT_FILE_1);
         assertThat(robot.getRobotDirection(), is(Direction.WEST));
         assertThat(robot.getRobotLocation().getRobotTableRow(), is(0));
@@ -29,18 +29,18 @@ public class ToyRobotAppIntegrationTest {
 
     }
 
-    public void resultShouldMatcgWithExpectedOutput_() {
+    public void resultShouldMatchWithExpectedOutput_2() {
         robotApp.startRobot(robot, INPUT_FILE_2);
         assertThat(robot.getRobotDirection(), is(Direction.WEST));
         assertThat(robot.getRobotLocation().getRobotTableRow(), is(3));
         assertThat(robot.getRobotLocation().getRobotTableColumn(), is(2));
     }
 
-    public void resultShouldMatcgWithExpectedOutput_2() {
+    public void resultShouldMatchWithExpectedOutput_3() {
         robotApp.startRobot(robot, INPUT_FILE_3);
         assertThat(robot.getRobotDirection(), is(Direction.EAST));
-        assertThat(robot.getRobotLocation().getRobotTableRow(), is(3));
-        assertThat(robot.getRobotLocation().getRobotTableColumn(), is(4));
+        assertThat(robot.getRobotLocation().getRobotTableRow(), is(4));
+        assertThat(robot.getRobotLocation().getRobotTableColumn(), is(2));
     }
 
 }
