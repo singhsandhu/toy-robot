@@ -24,7 +24,7 @@ public class RobotCommands implements Function<Stream<String>, Stream<String>>{
             int placeIndex = listOfCommands.indexOf(firstPlaceCommand.get());
             return listOfCommands.subList(placeIndex, listOfCommands.size()).stream();
         } else {
-            LOG.warn("No PLACE command found in the Instruction Set");
+            LOG.warn("No valid PLACE command found in the Instruction Set");
             return Stream.empty();
         }
 
