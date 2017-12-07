@@ -14,7 +14,7 @@ public class CommandValidator {
     private static final Pattern REGEX_PLACE_COMMAND = Pattern.compile("(\\d+),(\\d+),(\\w+)");
     private static final String WHITESPACE = " ";
 
-    public static Predicate<String> VALID_COMMAND = command -> isValidCommand(command);
+    public static final Predicate<String> VALID_COMMAND = command -> isValidCommand(command);
 
     static boolean isValidCommand(String command) {
         if(command.startsWith(CommandSet.PLACE.toString())) {
