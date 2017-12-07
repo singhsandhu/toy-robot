@@ -2,17 +2,14 @@ package com.rea.robot.validator;
 
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import static com.rea.robot.validator.RobotPositionValidator.IS_VALID_POSITION;
 import static com.rea.robot.validator.RobotPositionValidator.IS_VALID_DIRECTION;
+import static com.rea.robot.command.PlaceCommand.PLACE_COMMAND_MATCHER;
 
 
 public class CommandValidator {
-
-    private static final Pattern REGEX_PLACE_COMMAND = Pattern.compile("(\\d+),(\\d+),(\\w+)");
-    private static final String WHITESPACE = " ";
 
     public static final Predicate<String> VALID_COMMAND = command -> isValidCommand(command);
 
@@ -31,7 +28,7 @@ public class CommandValidator {
     }
 
     private static boolean isValidPlaceCommand(String command) {
-        Matcher matcher = REGEX_PLACE_COMMAND.matcher(command.substring(command.indexOf(WHITESPACE) + 1));
+        Matcher matcher = PLACE_COMMAND_MATCHER(command);
         if (matcher.matches()) {
             return IS_VALID_POSITION(Integer.parseInt(matcher.group(1)), Integer.parseInt(matcher.group(2)))
                     && IS_VALID_DIRECTION(matcher.group(3));
