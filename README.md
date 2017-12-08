@@ -20,6 +20,9 @@
 - cd /vagrant
 - ./build.sh
 
+## Running in user-interactive mode using Docker
+- docker run -it ramanjitsingh/toyrobot
+
 ## Running Robot App
 - java -jar target/Toy-Robot-1.0-FINAL.jar <optional_file_path>
 
