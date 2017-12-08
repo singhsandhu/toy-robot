@@ -5,7 +5,7 @@ import com.rea.robot.ToyRobot;
 public class ReportCommand implements Command {
 
     @Override
-    public void execute(ToyRobot toyRobot) {
+    public void execute(final ToyRobot toyRobot) {
         System.out.println(toyRobot);
     }
 }

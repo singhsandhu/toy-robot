@@ -13,14 +13,14 @@ public class ToyRobotApp {
         new ToyRobotApp().startRobot(new ToyRobot(), args);
     }
 
-    public void startRobot(ToyRobot robot, String... args) {
+    public void startRobot(final ToyRobot robot, final String... args) {
 
         /**
           * Filter the valid commands from given input.
           */
         Stream<String> validCommandsStream = new InputProcessor(System.in)
                 .processInput(args)
-                .map(val -> val.trim())
+                .map(String::trim)
                 .filter(VALID_COMMAND);
 
         /**

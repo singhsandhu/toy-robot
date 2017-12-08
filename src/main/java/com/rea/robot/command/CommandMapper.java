@@ -17,30 +17,25 @@ public class CommandMapper implements Function<String, Command> {
     private static final Logger LOG = Logger.getLogger(CommandMapper.class);
 
     @Override
-    public Command apply(String commandString) {
-        if(commandString.startsWith(PLACE.name())) {
+    public Command apply(final String commandString) {
+        if (commandString.startsWith(PLACE.name())) {
             return getPlaceCommand(commandString);
-        }
-        else if(commandString.equals(MOVE.name())) {
+        } else if (commandString.equals(MOVE.name())) {
             return new MoveCommand();
-        }
-        else if(commandString.equals(LEFT.name())) {
+        } else if (commandString.equals(LEFT.name())) {
             return new LeftCommand();
-        }
-        else if(commandString.equals(RIGHT.name())) {
+        } else if (commandString.equals(RIGHT.name())) {
             return new RightCommand();
-        }
-        else if(commandString.equals(REPORT.name())) {
+        } else if (commandString.equals(REPORT.name())) {
             return new ReportCommand();
-        }
-        else {
+        } else {
             return new DoNothingCommand();
         }
     }
 
-    private Command getPlaceCommand(String commandString) {
-        Matcher matcher = PlaceCommand.PLACE_COMMAND_MATCHER(commandString);
-        if(matcher.matches()) {
+    private Command getPlaceCommand(final String commandString) {
+        Matcher matcher = PlaceCommand.placeCommandMatcher(commandString);
+        if (matcher.matches()) {
             int row = Integer.parseInt(matcher.group(1));
             int column = Integer.parseInt(matcher.group(2));
             switch (matcher.group(3)) {

@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
 
 public class PlaceCommand implements Command {
 
-    private int row;
-    private int column;
+    private final int row;
+    private final int column;
     private Direction direction;
     private static final Logger LOG = Logger.getLogger(PlaceCommand.class);
 
@@ -25,9 +25,9 @@ public class PlaceCommand implements Command {
     }
 
     @Override
-    public void execute(ToyRobot toyRobot) {
+    public void execute(final ToyRobot toyRobot) {
         RobotLocation robotLocation = new RobotLocation();
-        if(robotLocation.isLocationValid(row, column)) {
+        if (robotLocation.isLocationValid(row, column)) {
             robotLocation.setRobotTableRow(row);
             robotLocation.setRobotTableColumn(column);
 
@@ -35,11 +35,11 @@ public class PlaceCommand implements Command {
             toyRobot.setRobotDirection(direction);
         }
         else {
-            LOG.warn("Invalid arguments to PLACE command : (" + row + "," + column+")");
+            LOG.warn("Invalid arguments to PLACE command : (" + row + "," + column + ")");
         }
     }
 
-    public static Matcher PLACE_COMMAND_MATCHER(String command) {
+    public static Matcher placeCommandMatcher(String command) {
         return REGEX_PLACE_COMMAND.matcher(command.substring(command.indexOf(WHITESPACE) + 1));
     }
 }

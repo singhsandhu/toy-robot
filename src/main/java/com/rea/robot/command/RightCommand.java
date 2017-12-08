@@ -8,7 +8,7 @@ import static com.rea.robot.position.ChangeDirection.RIGHT;
 public class RightCommand implements Command {
 
     @Override
-    public void execute(ToyRobot toyRobot) {
+    public void execute(final ToyRobot toyRobot) {
         Direction currentDirection = toyRobot.getRobotDirection();
         toyRobot.setRobotDirection(RIGHT.getNextDirection(currentDirection));
     }

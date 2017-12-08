@@ -25,8 +25,8 @@ public class RobotLocation {
     }
 
     public boolean isLocationValid(int row, int column) {
-        return row >=0 && row < TABLE_ROWS_LIMIT
-                && column >=0 && column <TABLE_COLUMN_LIMIT;
+        return row >= 0 && row < TABLE_ROWS_LIMIT
+                && column >= 0 && column < TABLE_COLUMN_LIMIT;
     }
 
 }

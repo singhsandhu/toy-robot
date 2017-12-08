@@ -12,7 +12,7 @@ public class ToyRobot {
         return robotLocation;
     }
 
-    public void setRobotLocation(RobotLocation robotLocation) {
+    public void setRobotLocation(final RobotLocation robotLocation) {
         this.robotLocation = robotLocation;
     }
 
@@ -20,7 +20,7 @@ public class ToyRobot {
         return robotDirection;
     }
 
-    public void setRobotDirection(Direction robotDirection) {
+    public void setRobotDirection(final Direction robotDirection) {
         this.robotDirection = robotDirection;
     }
 

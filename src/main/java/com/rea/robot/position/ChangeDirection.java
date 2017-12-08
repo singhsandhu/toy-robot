@@ -2,7 +2,7 @@ package com.rea.robot.position;
 
 public enum ChangeDirection {
     LEFT {
-        public Direction getNextDirection(Direction currentDirection) {
+        public Direction getNextDirection(final Direction currentDirection) {
             switch (currentDirection) {
                 case SOUTH:
                     return Direction.EAST;
@@ -19,7 +19,7 @@ public enum ChangeDirection {
     },
 
     RIGHT {
-        public Direction getNextDirection(Direction currentDirection) {
+        public Direction getNextDirection(final Direction currentDirection) {
             switch (currentDirection) {
                 case SOUTH:
                     return Direction.WEST;

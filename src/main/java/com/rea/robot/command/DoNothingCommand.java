@@ -8,7 +8,7 @@ public class DoNothingCommand implements Command {
     private static final Logger LOG = Logger.getLogger(DoNothingCommand.class);
 
     @Override
-    public void execute(ToyRobot toyRobot) {
+    public void execute(final ToyRobot toyRobot) {
         LOG.info("Not doing anything");
     }
 }
