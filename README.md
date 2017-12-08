@@ -12,7 +12,7 @@
 - Log4J
 
 ## Building locally (you will need Java 8 and Maven)
-./build.sh`
+./build.sh
 
 ## Building using Vagrant
 ```
