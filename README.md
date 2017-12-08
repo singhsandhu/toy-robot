@@ -28,5 +28,9 @@
 ## Running Robot App
 `java -jar target/Toy-Robot-1.0-FINAL.jar <optional_file_path>`
 
+## Can't see any output after you have given all the instructions to the App ?
+Please look at logs/rea-robot.log file 
+
+
 ## Author
 Ramanjit Singh
