@@ -50,7 +50,7 @@ public class InputProcessor {
         System.out.println("****** TOY ROBOT says Welcome********");
         System.out.println("VALID commands are : PLACE, MOVE, LEFT, RIGHT, REPORT: ");
         System.out.println("Invalid commands will be ignored");
-        System.out.println("Type \"CTRL + D\" to start execution.");
+        System.out.println("Press \"CTRL + D\" to start execution.");
         System.out.println();
 
         while (scanner.hasNext()) {
